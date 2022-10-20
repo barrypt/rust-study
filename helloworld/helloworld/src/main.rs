@@ -1,3 +1,5 @@
+use std::vec;
+
 fn greet_world(a: u32) -> Result<String, bool> {
     let southern_germany = "Grüß Gott!";
     let chinese = "世界，你好";
@@ -12,17 +14,48 @@ fn greet_world(a: u32) -> Result<String, bool> {
         Err(false)
     }
 }
-
+use std::collections::HashMap;
 fn main() {
     let mut v = 0;
     for i in 1..10 {
         v = if i == 9 { continue } else { i }
     }
     println!("{}", v);
-    let gg = greet_world(3);
+    let gg = greet_world(1);
+    let aaaa = gg.unwrap();
+    println!("{}", aaaa);
 
-    match gg {
-        Ok(t) => println!("{}", t),
-        Err(e) => println!("{}", e),
+    let mut ary = vec![4, 8, 6];
+    ary.push(3);
+    for (indexs, value) in ary.iter().enumerate() {
+        println!("{0},{1}", indexs, value)
     }
+
+    let mut scores = HashMap::new();
+
+    scores.insert("1", "2");
+    scores.insert("3", "5");
+
+    let loopscore = &scores;
+    for indexss in loopscore {
+        println!("{},{}", indexss.0, indexss.1)
+    }
+
+    let mp1 = scores.get("1");
+    let jj = mp1.is_some();
+    if jj {
+
+        match mp1{
+
+            None =>print!("kong"),
+            Some(b) => println!("1122{}",b)
+
+
+        }
+
+    }
+    // match gg {
+    //  Ok(t) => println!("{}", t),
+    //  Err(e) => println!("{}", e),
+    // }
 }
