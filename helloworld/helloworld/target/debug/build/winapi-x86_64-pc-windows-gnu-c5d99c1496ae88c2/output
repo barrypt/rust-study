@@ -1,0 +1,2 @@
+cargo:rerun-if-env-changed=WINAPI_NO_BUNDLED_LIBRARIES
+cargo:rustc-link-search=native=D:\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\winapi-x86_64-pc-windows-gnu-0.4.0\lib
