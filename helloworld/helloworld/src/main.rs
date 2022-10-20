@@ -1,5 +1,5 @@
 use std::vec;
-
+use std::collections::HashMap;
 fn greet_world(a: u32) -> Result<String, bool> {
     let southern_germany = "Grüß Gott!";
     let chinese = "世界，你好";
@@ -14,7 +14,6 @@ fn greet_world(a: u32) -> Result<String, bool> {
         Err(false)
     }
 }
-use std::collections::HashMap;
 fn main() {
     let mut v = 0;
     for i in 1..10 {
@@ -44,16 +43,14 @@ fn main() {
     let mp1 = scores.get("1");
     let jj = mp1.is_some();
     if jj {
-
-        match mp1{
-
-            None =>print!("kong"),
-            Some(b) => println!("1122{}",b)
-
-
+        match mp1 {
+            None => print!("kong"),
+            Some(b) => println!("1122{}", b),
         }
-
     }
+
+    let arry1 = [1, 2, 3, 4, 5];
+    println!("{}", arry1.len())
     // match gg {
     //  Ok(t) => println!("{}", t),
     //  Err(e) => println!("{}", e),
